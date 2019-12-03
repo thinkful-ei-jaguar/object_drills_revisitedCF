@@ -52,3 +52,11 @@ function personMaker() {
     delete sampleObj.bar;
     return sampleObj; 
   }
+
+  // Make Student Reports
+
+  function makeStudentReport(data) {
+     return data.map(function(item) {
+         return `${item.name}: ${item.grade}` //initially used "this.name", didn't work because we passed item param/obj through map
+     });
+  }
