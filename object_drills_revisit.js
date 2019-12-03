@@ -12,3 +12,13 @@ function createMyObject() {
         }
     }
 }
+
+//Object Updater
+
+function updateObject(obj) {
+    obj.foo = "foo"; //remember that updating the key/value pairs is done with = and NOT : !! 
+    obj.bar = "bar";
+    obj.bizz = "bizz";
+    obj.bang = "bang";
+    return obj;
+}
