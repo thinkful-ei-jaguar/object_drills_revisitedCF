@@ -57,6 +57,36 @@ function personMaker() {
 
   function makeStudentReport(data) {
      return data.map(function(item) {
-         return `${item.name}: ${item.grade}` //initially used "this.name", didn't work because we passed item param/obj through map
+         return `${item.name}: ${item.grade}` //initially used "this.name", but item is correct as it is passing through .map()
      });
+  }
+
+  //Enroll In Summer School
+
+  const studentData = [
+    {
+      name: 'Tim',
+      status: 'Current student',
+      course: 'Biology',
+    },
+    {
+      name: 'Sue',
+      status: 'Withdrawn',
+      course: 'Mathematics',
+    },
+    {
+      name: 'Liz',
+      status: 'On leave',
+      course: 'Computer science',
+    },
+  ];
+  
+  function enrollInSummerSchool(students) {
+    return students.map(student => { //you can do this because studentData is an ARRAY OF OBJECTS.
+        return {
+            name: student.name, // originally had as "students.name", but once again have to use param passing in .map()! 
+            status: "In Summer School", 
+            course: student.course
+        };
+    });
   }
