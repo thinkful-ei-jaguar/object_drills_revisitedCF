@@ -90,3 +90,19 @@ function personMaker() {
         };
     });
   }
+
+  //Find by ID
+
+  const scratchData = [
+    { id: 22, foo: 'bar' },
+    { id: 28, foo: 'bizz' },
+    { id: 19, foo: 'bazz' },
+  ];
+  
+  function findById(items, idNum) {
+    for (let x = 0; x < items.length; x++) { 
+        if (items.id[i] === idNum) {
+            return items [x];
+        }
+    }
+  } //when time permits, try this drill again with the .find() function. 
