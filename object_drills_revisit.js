@@ -106,3 +106,34 @@ function personMaker() {
         }
     }
   } //when time permits, try this drill again with the .find() function. 
+
+//Validate Object Keys 
+
+const objectA = {
+    id: 2,
+    name: 'Jane Doe',
+    age: 34,
+    city: 'Chicago',
+  };
+  
+
+  const objectB = {
+    id: 3,
+    age: 33,
+    city: 'Peoria',
+  };
+  
+  const expectedKeys = ['id', 'name', 'age', 'city'];
+  
+  function validateKeys(object, expectedKeys) {
+    if (Object.keys(object).length !== expectedKeys.length) { //if length of all key/value pairs does not match 2nd param's length
+        return false; //objectB won't work because lengths dont match the expectation
+    }
+    for (let i = 0; i < expectedKeys.length; i++) {
+      if (!Object.keys(object).find(key => key === expectedKeys[i])) { //in the loop, if object's keys are MORE than expected value, also false
+            return false;
+            }
+        }
+    return true; //after the if and loop filters out everything that doesn't meet critiera, remaining params are TRUE.
+}   
+  
